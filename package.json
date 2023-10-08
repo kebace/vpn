@@ -19,6 +19,8 @@
         "*** vpn ***": "",
         "dev:vpn": "turbo run dev --scope @tok/vpn",
         "build:vpn": "turbo run build --scope @tok/vpn",
+        "*** bot *** ": "",
+        "dev:bot": "turbo run dev --scope @tok/bot",
         "*** other *** ": "",
         "compress": "turbo run compress --scope @tok/compress"
     },
@@ -30,6 +32,7 @@
     "packageManager": "npm@9.5.1",
     "workspaces": [
         "app",
+        "bot",
         "examples/*",
         "packages/*"
     ]
