@@ -10,19 +10,33 @@
 
 import argparse
 import json
-import uuid
-from typing import Dict, Optional, Tuple, Any
 import re
-import httpx
 import urllib.parse
+import uuid
+from typing import Any, Dict, Optional, Tuple
 
-from telegram import (InlineKeyboardButton, InlineKeyboardMarkup,
-                      KeyboardButton, LabeledPrice, ReplyKeyboardMarkup,
-                      ReplyKeyboardRemove, Update, WebAppInfo, User)
+import httpx
+from telegram import (
+    InlineKeyboardButton,
+    InlineKeyboardMarkup,
+    KeyboardButton,
+    LabeledPrice,
+    ReplyKeyboardMarkup,
+    ReplyKeyboardRemove,
+    Update,
+    User,
+    WebAppInfo,
+)
 from telegram.constants import ChatAction, ParseMode
-from telegram.ext import (ApplicationBuilder, CallbackQueryHandler,
-                          CommandHandler, ContextTypes, MessageHandler,
-                          PreCheckoutQueryHandler, filters)
+from telegram.ext import (
+    ApplicationBuilder,
+    CallbackQueryHandler,
+    CommandHandler,
+    ContextTypes,
+    MessageHandler,
+    PreCheckoutQueryHandler,
+    filters,
+)
 
 
 def parse_args():
@@ -73,6 +87,8 @@ def remove_html_tags(text: str) -> str:
 
     # remove all other HTML tags
     return re.sub("<.*?>", "", text)
+
+
 # endregion: helper functions
 
 
@@ -94,23 +110,41 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         [
             KeyboardButton(
                 text="🌈 Base Onboarding",
-                web_app=WebAppInfo(url=add_get_params_to_url("https://karfly.github.io/telegram-onboarding-kit", user_data)),
+                web_app=WebAppInfo(
+                    url=add_get_params_to_url(
+                        "https://karfly.github.io/telegram-onboarding-kit", user_data
+                    )
+                ),
             ),
             KeyboardButton(
                 text="💃 Fashion AI Bot",
-                web_app=WebAppInfo(url=add_get_params_to_url("https://tok-ai.netlify.app", user_data)),
+                web_app=WebAppInfo(
+                    url=add_get_params_to_url("https://tok-ai.netlify.app", user_data)
+                ),
             ),
             KeyboardButton(
                 text="🧘 Meditation Bot",
-                web_app=WebAppInfo(url=add_get_params_to_url("https://tok-meditation.netlify.app", user_data)),
+                web_app=WebAppInfo(
+                    url=add_get_params_to_url(
+                        "https://tok-meditation.netlify.app", user_data
+                    )
+                ),
             ),
             KeyboardButton(
                 text="🧚‍♂️ AI Tales Bot",
-                web_app=WebAppInfo(url=add_get_params_to_url("https://tok-wondertales.netlify.app", user_data)),
+                web_app=WebAppInfo(
+                    url=add_get_params_to_url(
+                        "https://tok-wondertales.netlify.app", user_data
+                    )
+                ),
             ),
             KeyboardButton(
                 text="🔐 VPN Onboarding",
-                web_app=WebAppInfo(url=add_get_params_to_url("https://karfly.github.io/tok-vpn", user_data)),
+                web_app=WebAppInfo(
+                    url=add_get_params_to_url(
+                        "https://karfly.github.io/tok-vpn", user_data
+                    )
+                ),
             ),
         ]
     )
@@ -171,7 +205,9 @@ async def send_message_that_payment_method_is_not_supported(
     )
 
 
-async def send_message_about_successful_payment(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+async def send_message_about_successful_payment(
+    update: Update, context: ContextTypes.DEFAULT_TYPE
+) -> None:
     await update.effective_message.delete()  # delete message with invoice
 
     await update.effective_message.reply_text(
