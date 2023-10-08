@@ -16,6 +16,9 @@
         "dev:wondertales": "turbo run dev --scope @tok/wondertales",
         "build:wondertales": "turbo run build --scope @tok/wondertales",
         "build:all": "turbo run build",
+        "*** vpn ***": "",
+        "dev:vpn": "turbo run dev --scope @tok/vpn",
+        "build:vpn": "turbo run build --scope @tok/vpn",
         "*** other *** ": "",
         "compress": "turbo run compress --scope @tok/compress"
     },
