@@ -1,6 +1,21 @@
 # @tok/ui plugins
 
-# 1. [Currency](./currency/currency.plugin.ts)
+# 1. [Alerts](./alerts/Alerts.plugin.ts)
+
+Required plugin to enable [useAlerts](../use/alerts/README.md) functionality
+
+## Usage
+
+```ts
+// main.ts
+import { createApp } from 'vue';
+import App from './App.vue';
+import { AlertsPlugin } from '@tok/ui/plugins/alerts';
+
+createApp(App).use(AlertsPlugin).mount('#app');
+```
+
+# 2. [Currency](./currency/currency.plugin.ts)
 
 Allows you to globally configure options for [Money component](../components/Money/README.md)
 

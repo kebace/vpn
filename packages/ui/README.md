@@ -1,22 +1,16 @@
-# UI Package
+# @tok/ui
 
-###### Components
-
-1. [Alert](./components/Alert/README.md)
-2. [Carousel](./components/Carousel/README.md)
-3. [CheckboxBlock](./components/CheckboxBlock/README.md)
-4. [FlatButton](./components/FlatButton/README.md)
-5. [InputText](./components/InputText/README.md)
-6. [Link](./components/Link/README.md)
-7. [Money](./components/Money/README.md)
-8. [Pagination](./components/Pagination/README.md)
-9. [Popup](./components/Popup/README.md)
-10. [Portal](./components/Portal/README.md)
-11. [PrimitiveCheckbox](./components/PrimitiveCheckbox/README.md)
-12. [PrimitiveRadio](./components/PrimitiveRadio/README.md)
-13. [Root](./components/Root/README.md)
-14. [SvgIcon](./components/SvgIcon/README.md)
-15. [Toggle](./components/Toggle/README.md)
+- [Components](./components/README.md)
+- [Directives](./directives/README.md)
+- [Dom](./dom/README.md)
+- [Functions](./functions/README.md)
+- [Number](./number/README.md)
+- [Plugins](./plugins/README.md)
+- [Styles](./styles/README.md)
+- [Tokens](./tokens/README.md)
+- [Types](./types/README.md)
+- [Use](./use/README.md)
+- [Manual Installation Guide](#manual-installation-guide)
 
 ## Manual Installation Guide
 

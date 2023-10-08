@@ -4,8 +4,8 @@ import { DefinePressetsPlugin } from '@tok/generation/plugins/definePressets';
 import { FormStatePlugin } from '@tok/generation/plugins/formState';
 import { ThemePlugin } from '@tok/generation/plugins/theme';
 import { TokI18nPlugin } from '@tok/i18n';
+import { AlertsPlugin } from '@tok/ui/plugins/alerts';
 import { CurrencyPlugin } from '@tok/ui/plugins/currency';
-import { AlertsPlugin } from '@tok/ui/use/alerts';
 import { createApp } from 'vue';
 import {
   createRouter,
