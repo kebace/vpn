@@ -8,14 +8,15 @@
 # Happy coding!
 
 
-import argparse
 import json
+import os
 import re
 import urllib.parse
 import uuid
 from typing import Any, Dict, Optional, Tuple
-
 import httpx
+from dotenv import load_dotenv
+
 from telegram import (
     InlineKeyboardButton,
     InlineKeyboardMarkup,
@@ -37,34 +38,6 @@ from telegram.ext import (
     PreCheckoutQueryHandler,
     filters,
 )
-
-
-def parse_args():
-    parser = argparse.ArgumentParser()
-
-    parser.add_argument(
-        "--bot_token",
-        type=str,
-        required=True,
-        help="Telegram bot token from @BotFather",
-    )
-
-    parser.add_argument(
-        "--telegram_payments_token",
-        type=str,
-        required=False,
-        help="Telegram Payments token from @BotFather. If not specified, Telegram Payments method will not work",
-    )
-
-    parser.add_argument(
-        "--wallet_pay_token",
-        type=str,
-        required=False,
-        help="Token for Wallet Pay from pay.wallet.tg. If not specified, Wallet Pay method will not work",
-    )
-
-    args = parser.parse_args()
-    return args
 
 
 # region: helper functions
@@ -443,5 +416,17 @@ def run_bot(
 
 
 if __name__ == "__main__":
-    args = parse_args()
-    run_bot(args.bot_token, args.telegram_payments_token, args.wallet_pay_token)
+    load_dotenv()  # load variables from .env file (don't forget to fill it!)
+
+    bot_token = os.getenv("BOT_TOKEN")
+    if not bot_token:
+        raise ValueError("Invalid BOT_TOKEN in .env file")
+
+    telegram_payments_token = os.getenv("TELEGRAM_PAYMENTS_TOKEN")
+    wallet_pay_token = os.getenv("WALLET_PAY_TOKEN")
+
+    run_bot(
+        bot_token=bot_token,
+        telegram_payments_token=telegram_payments_token if telegram_payments_token else None,
+        wallet_pay_token=wallet_pay_token if wallet_pay_token else None,
+    )
