@@ -16,7 +16,7 @@
   transition: $prop $duration $timing;
 }
 
-@mixin strict-size($width, $height) {
+@mixin size($width, $height) {
   min-width: $width;
   min-height: $height;
 
@@ -27,7 +27,7 @@
   max-height: $height;
 }
 
-@mixin hide-scroll() {
+@mixin hidescroll() {
   scrollbar-width: none;
   -ms-overflow-style: none;
 

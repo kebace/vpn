@@ -1,6 +1,6 @@
 <template>
   <div
-    id="tok_popups-host"
+    id="tok-popups-host"
     :class="[$style.host, isShown && $style.host_overlay]"
   />
 </template>

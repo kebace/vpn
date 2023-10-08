@@ -31,6 +31,10 @@
   --tok-padding-s: 0.5rem;
   --tok-padding-xs: 0.25rem;
 
+  --tok-disabled-opacity: 0.56;
+
+  --tok-hover-opacity: 0.8;
+
   // #fff -> rgb(255, 255, 255)
   --tok-background-color-base: 255, 255, 255;
   --tok-background-color: rgba(var(--tok-background-color-base), 1);
@@ -53,10 +57,6 @@
   --tok-text-color-16: rgba(var(--tok-text-color-base), 0.16);
   --tok-text-color-08: rgba(var(--tok-text-color-base), 0.08);
 
-  --tok-white: #fff;
-  --tok-dark: #111;
-  --tok-dark-80: #111111cc;
-
   --tok-primary: var(--tg-theme-button-color, #007aff);
   --tok-primary-text: var(--tg-theme-button-text-color, var(--tok-white));
 
@@ -64,15 +64,16 @@
 
   --tok-link: var(--tg-theme-link-color, var(--tok-text-color-80));
 
-  --tok-disabled-opacity: 0.56;
-
-  --tok-hover-opacity: 0.8;
-
   --tok-error-bg: #ce372d1f;
   --tok-error-fill: #ce372d;
 
   --tok-success-bg: #4ac99b1f;
   --tok-success-fill: #4ac99b;
+
+  // static
+  --tok-white: #fff;
+  --tok-dark: #111;
+  --tok-dark-80: #111111cc;
 }
 
 html {

@@ -4,6 +4,10 @@ Allows you to rotate through arbitrary items.
 
 Multiple items can be shown simultaneously
 
+## Props
+
+All available props see in [Carousel.props.ts](./Carousel.props.ts)
+
 ## Usage
 
 ```vue
@@ -33,21 +37,20 @@ const carouselRef = ref<CarouselExpose | null>(null);
 
 const onNext = () => {
   /* 
-   You can manipulate activeIndex, but please note that
-   this approach is unsafe as it may lead to overlapping with the total number of items.
-   You can use clamp function from '@tok/ui/number' to make it safe
+    You can manipulate activeIndex, but please note that
+    this approach is unsafe as it may lead to overlapping with the total number of items.
+    You can use clamp function from '@tok/ui/number' to make it safe
    */
   activeIndex.value = activeIndex.value + 1;
 
   /*
-   Alternatively, you can use carouselInstance, which is a safer option
-   that won't lead to overlapping with the total number of items
+    Alternatively, you can use carouselInstance, which is a safer option
+    that won't lead to overlapping with the total number of items
    */
   carouselRef.value?.next();
 };
 
 const onBack = () => {
-  // the same with back method
   activeIndex.value = activeIndex.value - 1;
 
   // or

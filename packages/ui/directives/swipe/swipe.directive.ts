@@ -5,8 +5,6 @@ export interface Swipe {
   events: [TouchEvent, TouchEvent];
 }
 
-const INSTANCE_KEY_START = '__tok_swipe_start';
-const INSTANCE_KEY_END = '__tok_swipe_end';
 const DEFAULT_THRESHOLD = 30;
 const DEFAULT_TIMEOUT = 500;
 

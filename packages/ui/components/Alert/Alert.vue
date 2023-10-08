@@ -115,7 +115,7 @@ const context = {
 
 .tok-alert-close {
   @include clearbutton;
-  @include strict-size(2rem, 2rem);
+  @include size(2rem, 2rem);
   @include transition(color);
 
   position: absolute;

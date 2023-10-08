@@ -76,7 +76,7 @@ const productWidthStyle = computed(() => {
 @import '@tok/ui/styles/local.scss';
 
 .form {
-  @include hide-scroll;
+  @include hidescroll;
 
   display: flex;
   overflow-x: auto;

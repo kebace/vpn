@@ -62,6 +62,11 @@ const beforeUnmount = (element: HTMLElement) => {
   }
 };
 
+/**
+ * Directive for emitting scroll events with values -1 (to the left) or 1 (to the right).
+ * This directive is designed for desktop use only.
+ * Identifies a mobile device using the isMobile function
+ */
 export const CarouselScrollDirective: ObjectDirective<HTMLElement, Binding> = {
   beforeMount,
   beforeUnmount,

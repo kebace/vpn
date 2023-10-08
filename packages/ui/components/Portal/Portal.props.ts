@@ -1,7 +1,7 @@
 import { VNode } from 'vue';
 
 export type PortalProps = {
-  appendTo?: string;
+  appendTo?: '#tok-popups-host' | '#tok-alerts-host' | string;
 };
 
 export type PortalSlots = {

@@ -1,5 +1,5 @@
 <template>
-  <Portal v-if="popupsContainer" append-to="#tok_popups-host">
+  <Portal v-if="popupsContainer" append-to="#tok-popups-host">
     <transition
       :enter-from-class="$style[`tok-popup-enter-from`]"
       :enter-active-class="$style[`tok-popup-enter-active`]"
@@ -23,7 +23,7 @@
                 icon-button
                 aria-label="close popup"
                 icon="close"
-                appearance="flat"
+                appearance="ghost"
                 shape="square"
                 @click.prevent="close"
               />
@@ -164,8 +164,8 @@ onBeforeUnmount(() => {
 
 .close {
   position: absolute;
-  right: 8px;
-  top: 8px;
+  right: 0.5rem;
+  top: 0.5rem;
 }
 
 .tok-popup-enter-active,
@@ -179,7 +179,7 @@ onBeforeUnmount(() => {
 
 .tok-popup-enter-from,
 .tok-popup-leave-to {
-  transform: translateY(32px);
+  transform: translateY(2rem);
   opacity: 0;
 }
 

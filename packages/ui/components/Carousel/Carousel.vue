@@ -287,7 +287,7 @@ defineExpose<CarouselExpose>({
 }
 
 .scroller {
-  @include hide-scroll;
+  @include hidescroll;
 
   display: flex;
   overflow: auto;

@@ -12,10 +12,11 @@
 8. [Pagination](./components/Pagination/README.md)
 9. [Popup](./components/Popup/README.md)
 10. [Portal](./components/Portal/README.md)
-11. [PrimitiveRadio](./components/PrimitiveRadio/README.md)
-12. [Root](./components/Root/README.md)
-13. [SvgIcon](./components/SvgIcon/README.md)
-14. [Toggle](./components/Toggle/README.md)
+11. [PrimitiveCheckbox](./components/PrimitiveCheckbox/README.md)
+12. [PrimitiveRadio](./components/PrimitiveRadio/README.md)
+13. [Root](./components/Root/README.md)
+14. [SvgIcon](./components/SvgIcon/README.md)
+15. [Toggle](./components/Toggle/README.md)
 
 ## Manual Installation Guide
 
@@ -39,23 +40,23 @@ Use this guide to manually install the UI package in your project.
    createApp(App).mount('#app');
    ```
 
-3. If you want to use the built-in Popups and Alerts, add the `Root` component to your `App.vue` file as shown below:
+3. If you want to use the built-in [Popups](./components/Popup/README.md) and [Alerts](./use/alerts/README.md), add the [Root](./components/Root/README.md) component to your `App.vue` file as shown below:
 
-   ```html
+   ```vue
    <!-- App.vue -->
    <template>
-     <Root>
+     <root>
        <!-- other code like -->
        <!-- <router-view /> -->
-     </Root>
+     </root>
    </template>
 
    <script setup lang="ts">
-     import { Root } from '@tok/ui/components/Root';
+   import { Root } from '@tok/ui/components/Root';
    </script>
    ```
 
-4. If you want to use Alerts, you should add AlertsPlugin in your main.ts file:
+4. Also for [Alerts](./use/alerts/README.md), you should add AlertsPlugin in your main.ts file:
 
    ```ts
    // main.ts
@@ -143,7 +144,7 @@ provide(CURRENCY_OPTIONS_TOKEN, {});
    @import '@tok/ui/styles/local.scss';
 
    div {
-     @import hide-scroll;
+     @import hidescroll;
      // ...
    }
    </style>

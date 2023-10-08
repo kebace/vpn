@@ -140,13 +140,8 @@ const computedComponent = computed(() => {
     color: var(--tok-primary-text);
   }
 
-  &[data-appearance='secondary'] {
-    background: var(--tok-secondary);
-    color: var(--tok-secondary-text);
-  }
-
-  &[data-appearance='flat'],
-  &[data-appearance='outline'] {
+  &[data-appearance='secondary'],
+  &[data-appearance='ghost'] {
     background: transparent;
     color: var(--tok-primary);
 
@@ -156,7 +151,7 @@ const computedComponent = computed(() => {
     }
   }
 
-  &[data-appearance='outline'] {
+  &[data-appearance='secondary'] {
     &:after {
       position: absolute;
       top: 0;

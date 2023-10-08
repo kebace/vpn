@@ -1,10 +1,13 @@
 # Alert Component
 
-All available props see in [Alert.props.ts](./Alert.props.ts)
+The component is used in the [useAlerts()](../../use/alerts/README.md) function
 
-```
-Used in useAlerts()
-```
+> [!IMPORTANT]
+> To make useAlerts() work, it is essential to wrap your entire application in the [Root](../Root/README.md) component
+
+## Props
+
+All available props see in [Alert.props.ts](./Alert.props.ts)
 
 ## Usage
 
@@ -53,7 +56,7 @@ import { Alert } from '@tok/ui/components/Alert';
 }
 ```
 
-or inside other component with style in scope mode
+or inside other component with style in scoped mode
 
 ```vue
 <template>
@@ -66,7 +69,7 @@ or inside other component with style in scope mode
 import { Alert } from '@tok/ui/components/Alert';
 </script>
 
-<style lang="scss" scope>
+<style lang="scss" scoped>
 .container {
   .tok-alert {
     &[data-type='custom'] {

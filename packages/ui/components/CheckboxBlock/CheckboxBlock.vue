@@ -1,7 +1,7 @@
 <template>
   <label
     :for="id"
-    class="tok-checkbox-block"
+    class="tok-checkboxblock"
     :data-size="size"
     :data-shape="shape"
     :data-state="state"
@@ -10,10 +10,10 @@
       <span v-html="translatedPlaceholder" />
     </slot>
 
-    <primitive-checkbox class="tok-checkbox-block-check" :value="modelValue">
+    <primitive-checkbox class="tok-checkboxblock-check" :value="modelValue">
       <input
         :id="id"
-        class="tok-checkbox-block-native"
+        class="tok-checkboxblock-native"
         type="checkbox"
         :checked="!!modelValue"
         :disabled="disabled"
@@ -25,6 +25,7 @@
 
 <script setup lang="ts">
 import { useI18n } from '@tok/i18n';
+import { PrimitiveCheckbox } from '@tok/ui/components/PrimitiveCheckbox';
 import { getElementId } from '@tok/ui/functions';
 import { computed, toRefs } from 'vue';
 
@@ -33,7 +34,6 @@ import {
   CheckboxBlockEmits,
   CheckboxBlockProps,
 } from './CheckboxBlock.props';
-import PrimitiveCheckbox from './PrimitiveCheckbox.vue';
 
 const props = withDefaults(
   defineProps<CheckboxBlockProps>(),
@@ -77,7 +77,7 @@ const onChange = (event: Event) => {
 <style lang="scss" scoped>
 @import '@tok/ui/styles/local.scss';
 
-.tok-checkbox-block {
+.tok-checkboxblock {
   @include transition(outline-color);
 
   display: inline-flex;
@@ -140,12 +140,12 @@ const onChange = (event: Event) => {
   }
 }
 
-.tok-checkbox-block-check {
+.tok-checkboxblock-check {
   margin-left: 1rem;
   border-radius: 100%;
 }
 
-.tok-checkbox-block-native {
+.tok-checkboxblock-native {
   @include clearinput;
 
   position: absolute;

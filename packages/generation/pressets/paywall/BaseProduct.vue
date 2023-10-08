@@ -71,7 +71,7 @@ const onChange = (event: Event) => {
   border: 2px solid transparent;
 
   min-height: var(--tok-height-l);
-  background-color: var(--tok-stinger);
+  background: var(--tok-stinger);
 
   &_active {
     border-color: var(--tok-primary);

@@ -12,7 +12,9 @@
 <script setup lang="ts">
 import { SvgIcon } from '@tok/ui/components/SvgIcon';
 
-defineProps<{ value: boolean | null }>();
+import type { PrimitiveCheckboxProps } from './PrimitiveCheckbox.props';
+
+defineProps<PrimitiveCheckboxProps>();
 </script>
 
 <style lang="scss" module>

@@ -61,7 +61,7 @@ const close = (id: string, onClose?: () => void) => {
 
   &_top {
     & > .container {
-      margin-top: 12px;
+      margin-top: 0.75rem;
     }
   }
 }
@@ -91,7 +91,7 @@ const close = (id: string, onClose?: () => void) => {
 .alert-enter-from,
 .alert-leave-to {
   opacity: 0;
-  transform: translate(0, -30px);
+  transform: translate(0, -2rem);
 }
 
 .alert-enter-active {

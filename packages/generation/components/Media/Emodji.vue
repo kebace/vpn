@@ -44,7 +44,7 @@ const height = computed(() => computedSize.value.height);
 @import '@tok/ui/styles/local.scss';
 
 .emodji {
-  @include strict-size(v-bind(width), v-bind(height));
+  @include size(v-bind(width), v-bind(height));
 
   display: inline-flex;
   align-items: center;

@@ -56,7 +56,7 @@ const onChange = (event: Event) => {
   vertical-align: middle;
   overflow: hidden;
   background-color: var(--tok-text-color-32);
-  border-radius: 1rem;
+  border-radius: 1em;
   color: var(--tok-white);
   height: 2em;
   width: 3.5em;

@@ -8,7 +8,7 @@ export type FlatButtonProps = {
   iconRight?: string;
   rightRotate?: boolean;
   shape?: 'square' | 'rounded' | null;
-  appearance?: 'primary' | 'secondary' | 'accent' | 'flat' | 'outline' | string;
+  appearance?: 'primary' | 'secondary' | 'ghost' | string;
   loading?: boolean;
   disabled?: boolean;
   iconButton?: boolean;

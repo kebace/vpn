@@ -10,7 +10,7 @@
       <flat-button
         size="l"
         shape="rounded"
-        :appearance="applied ? 'outline' : 'primary'"
+        :appearance="applied ? 'secondary' : 'primary'"
         :class="$style.footer__button"
         :icon="applied ? 'check' : 'wind'"
         @click="onToggle"

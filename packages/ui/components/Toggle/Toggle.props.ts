@@ -3,7 +3,7 @@ export type ToggleProps = {
 
   id?: string;
 
-  size?: 's' | 'm';
+  size?: 's' | 'm' | string;
 
   disabled?: boolean;
 };

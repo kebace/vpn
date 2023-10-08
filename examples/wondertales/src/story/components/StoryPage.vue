@@ -65,8 +65,8 @@ const translatedText = i18n.useTranslated(text);
     z-index: -1;
 
     background-image: var(--tok-story-image);
-    filter: blur(16px);
-    -webkit-filter: blur(16px);
+    filter: blur(1rem);
+    -webkit-filter: blur(1rem);
   }
 }
 

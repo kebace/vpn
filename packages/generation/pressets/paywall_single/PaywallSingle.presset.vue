@@ -64,7 +64,7 @@ const selectedProduct = computed(() => {
   border-radius: 0.75rem;
   text-align: left;
 
-  box-shadow: 0px 4px 24px 0px var(--tok-text-color-08);
+  box-shadow: 0px 0.25rem 1.5rem 0px var(--tok-text-color-08);
 }
 
 .container {

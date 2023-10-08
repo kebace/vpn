@@ -11,10 +11,10 @@ export type CarouselProps<T> = {
   items: ReadonlyArray<T>;
 
   /* 
-  Whether or not slider can be dragged by clicking and holding
+    Whether or not slider can be dragged by clicking and holding
 
-  This parameter only works on desktop devices and is ignored on mobile devices.
-  The determination of whether the device is mobile is made through the `isMobile` function
+    This parameter only works on desktop devices and is ignored on mobile devices.
+    The determination of whether the device is mobile is made through the `isMobile` function
   */
   draggable?: boolean;
 

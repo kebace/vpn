@@ -3,9 +3,9 @@ export type CheckboxBlockProps = {
 
   placeholder?: string;
 
-  size?: 's' | 'm' | 'l';
+  size?: 's' | 'm' | 'l' | string;
 
-  shape?: 'rounded';
+  shape?: 'rounded' | string;
 
   disabled?: boolean;
 
