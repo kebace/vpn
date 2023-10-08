@@ -48,7 +48,6 @@ import { MainButton } from '@tok/telegram-ui/components/MainButton';
 import { useTelegramSdk } from '@tok/telegram-ui/use/sdk';
 import { Carousel, CarouselExpose } from '@tok/ui/components/Carousel';
 import { FlatButton } from '@tok/ui/components/FlatButton';
-import { useAlerts } from '@tok/ui/use/alerts';
 import { computed, ref } from 'vue';
 import { useRouter } from 'vue-router';
 
@@ -59,11 +58,9 @@ import { storyStub } from './story.stub';
 
 const router = useRouter();
 const sdk = useTelegramSdk();
-const alertsService = useAlerts();
 
 const i18n = useI18n();
 const translatedText = i18n.useTranslated('_story.mainButton');
-const alertText = i18n.useTranslated('_story.alert');
 
 const carouselRef = ref<CarouselExpose | null>(null);
 
@@ -93,8 +90,6 @@ const onNext = () => {
 
 const onMainButton = () => {
   router.push('/?page=6');
-
-  alertsService.show(alertText.value);
 };
 </script>
 

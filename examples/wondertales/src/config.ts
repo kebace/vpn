@@ -107,7 +107,6 @@ export default defineConfig({
             src: import('./assets/stickers/shpooky_speed.tgs'),
           },
           title: '_s4.title',
-          description: '_s4.description',
           list: [
             {
               media: {
